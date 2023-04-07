@@ -1,0 +1,37 @@
+body {
+  background-color: #e3e3e3;
+}
+
+.evaluate_contents {
+  background-color: white;
+  margin: 20px auto;
+  padding: 20px 30px;
+  width: 60vw;
+}
+
+.evaluate_title {
+  text-align: center;
+  font-size:30px;
+}
+
+.evaluate_table {
+  margin: 0px auto;
+  font-size: 20px;
+}
+.evaluate_table_title {
+  padding:5px 20px;
+}
+.evaluate_table_item {
+  padding: 5px 20px;
+  text-align: center;
+}
+
+.evaluate_return_botton {
+  color: white;
+  background-color: #0000ec;
+  display: block;
+  margin: 20px auto;
+  padding: 5px 10px;
+  border: none;
+}
+

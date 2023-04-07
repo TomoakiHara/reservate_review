@@ -1,0 +1,56 @@
+body {
+  background-color: #e3e3e3;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+.login_contents {
+  background-color: white;
+  margin: 20px auto;
+  width: 50vw;
+}
+
+.login_title {
+  background-color: #0000ec;
+  color: white;
+  padding: 15px 20px;
+}
+
+.form_text_block {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.person_icon_img {
+  width: 20px;
+}
+
+.email_icon_img {
+  width: 20px;
+}
+
+.key_icon_img {
+  width: 20px;
+}
+
+.form_text {
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.login_botton {
+  background-color: #0000ff;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  margin-bottom: 10px;
+}
+
+.login_botton_block {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px;
+}

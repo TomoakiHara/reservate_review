@@ -1,0 +1,23 @@
+body {
+  background-color: #e3e3e3;
+}
+
+.thanks_contents {
+  background-color: white;
+  margin: 20px auto;
+  padding: 50px 0px;
+  width: 40vw;
+}
+
+.thanks_comment {
+  text-align: center;
+}
+
+.thanks_return_botton {
+  color: white;
+  background-color: #0000ec;
+  display: block;
+  margin: 0 auto;
+  padding: 5px 10px;
+  border: none;
+}

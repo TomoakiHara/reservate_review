@@ -1,0 +1,145 @@
+body {
+  background-color: #e3e3e3;
+}
+
+.mypage_contents {
+  display: flex;
+  justify-content: space-around;
+}
+
+.reservation_statues {
+  width: 30vw;
+  margin: 20px 20px;
+}
+
+
+.reservation_statues_block {
+  background-color: #0000ec;
+  padding: 20px 20px;
+}
+.reservation_statues_title {
+  font-size: 20px;
+}
+.login_user{
+  font-size: 30px;
+}
+.favorite_shop_title{
+  font-size: 20px;
+}
+
+.mypage_resercation_icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+
+.mypage_reservation_icon_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mypage_reservation_icon_block_left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.shop_detail_return_botton {
+  background: none;
+  color: white;
+  border: solid 3px white;
+  border-radius: 15px;
+  width: 27px;
+  height: 27px;
+}
+
+.mypage_evaluate_block {
+  display: flex;
+  justify-content: space-between;
+}
+.mypage_evaluate {
+  margin: 10px 20px;
+  padding: 3px;
+  border: solid 1px gray;
+  border-radius: 3px;
+}
+.mypage_evaluate_send_botton {
+  background: #dee2d6;
+  border: none;
+  margin-top: 22px;
+  margin-right: 10px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 2px gray;
+}
+.evaluate_comment {
+  color: red;
+  text-align: center;
+}
+
+
+.favorite_shop_list {
+  display: flex;
+  justify-content: center;
+  margin: 0px 20px;
+}
+
+.card_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  position: relative;
+  margin: 10px 20px 110px;
+}
+
+.shop_list_photo {
+  width: 100%;
+  z-index: 1;
+}
+
+.shop_list_contents {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  position: absolute;
+  top: 133px;
+}
+
+.shop_list_name {
+  margin-left: 10px;
+  position: absolute;
+}
+
+.shop_tag {
+  margin-left: 10px;
+  font-size: 10px;
+  position: absolute;
+  top: 30px;
+}
+
+.shop_detail_botton {
+  position: absolute;
+  top: 70px;
+  display: block;
+  background-color: #0000ec;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 10px;
+  padding: 5px 15px;
+  margin-left: 10px;
+}
+
+.favorite_icon {
+  position: absolute;
+  top: 70px;
+  left: 160px;
+  display: block;
+  border: none;
+  background-color: white;
+}

@@ -1,0 +1,106 @@
+body {
+  background-color: #e3e3e3;
+}
+
+.shop_detail {
+  width: 45vw;
+}
+
+.shop_detail_contents {
+  display: flex;
+  justify-content: space-around;
+}
+
+.shop_detail_title_block {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.shop_detail_return_botton {
+  background: white;
+  border: none;
+  margin-top: 22px;
+  margin-right: 10px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 2px gray;
+}
+.shop_detail_name {
+  font-size: 20px;
+  margin-top: 22px;
+}
+.shop_detail_photo {
+  width: 100%;
+}
+.move_evaluate_botton {
+  background: #dee2d6;
+  border: none;
+  margin-top: 22px;
+  margin-right: 10px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 2px gray;
+}
+
+
+.shop_reservation_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.shop_reservation {
+  width: 45vw;
+  height: 100%;
+  background-color: #6d6dff;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.shop_reservation_title {
+  color: white;
+  margin: 10px 20px;
+}
+
+.shop_reservation_date {
+  margin: 10px 20px;
+  padding: 3px;
+  width: 30%;
+  border: solid 1px gray;
+  border-radius: 3px;
+}
+
+.shop_reservation_time {
+  margin: 10px 20px;
+  padding: 3px;
+  width: 80%;
+  border: solid 1px gray;
+  border-radius: 3px;
+}
+
+.shop_reservation_number {
+  margin: 10px 20px;
+  padding: 3px;
+  width: 80%;
+  border: solid 1px gray;
+  border-radius: 3px;
+}
+
+.shop_reservation_table {
+  background-color: #a3a3ff;
+  color: white;
+  margin: 10px 20px;
+  padding: 10px 0px;
+  width: 90%;
+}
+
+.shop_reservation_botton {
+  background-color: #0000ff;
+  color: white;
+  width: 100%;
+  border: none;
+  padding: 10px 0px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
