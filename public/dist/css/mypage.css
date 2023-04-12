@@ -5,17 +5,24 @@ body {
 .mypage_contents {
   display: flex;
   justify-content: space-around;
+  width:100vw;
 }
 
 .reservation_statues {
   width: 30vw;
-  margin: 20px 20px;
+  margin: 0px 10px;
+}
+.favorite_shop_list {
+  width: 30vw;
+  margin: 0px 10px;
 }
 
 
 .reservation_statues_block {
-  background-color: #0000ec;
-  padding: 20px 20px;
+  background-color: cadetblue;
+  width:38vw;
+  margin:10px 0px;
+  padding: 10px 20px;
 }
 .reservation_statues_title {
   font-size: 20px;
@@ -27,20 +34,32 @@ body {
   font-size: 20px;
 }
 
-.mypage_resercation_icon {
+.mypage_reservation_icon {
   width: 20px;
   height: 20px;
   margin-top: 20px;
   margin-right: 10px;
 }
-
+.evaluate_comment {
+  width: 38vw;
+  margin: 10px 0px;
+  padding: 0px 20px;
+  text-align: center;
+  color: red;
+}
+.reserve_edit_error_comment {
+  width: 38vw;
+  margin: 10px 0px;
+  padding: 0px 20px;
+  color: red;
+  text-align: center;
+}
 
 .mypage_reservation_icon_block {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .mypage_reservation_icon_block_left {
   display: flex;
   justify-content: flex-start;
@@ -54,6 +73,45 @@ body {
   width: 27px;
   height: 27px;
 }
+
+.shop_reservation_info_block{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shop_reservation_table {
+  width:80%
+}
+.shop_reservation_table_item {
+  padding: 0px 10px;
+}
+.shop_reservation_date {
+  padding: 3px;
+  width: 10vw;
+  border: solid 1px gray;
+  border-radius: 3px;
+}
+.shop_reservation_time {
+  padding: 3px;
+  width: 11vw;
+  border: solid 1px gray;
+  border-radius: 3px;
+}
+.shop_reservation_number {
+  padding: 3px;
+  width: 11vw;
+  border: solid 1px gray;
+  border-radius: 3px;
+}
+.mypage_reserve_change_botton {
+  background: #e5ddd4;
+  border: none;
+  height: 10%;
+  padding: 4px 8px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 2px gray;
+}
+
 
 .mypage_evaluate_block {
   display: flex;
@@ -74,10 +132,7 @@ body {
   border-radius: 3px;
   box-shadow: 3px 3px 2px gray;
 }
-.evaluate_comment {
-  color: red;
-  text-align: center;
-}
+
 
 
 .favorite_shop_list {

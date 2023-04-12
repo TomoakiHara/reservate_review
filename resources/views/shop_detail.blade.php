@@ -47,7 +47,6 @@
         <img src="{{$detail->img}}" class="shop_detail_photo">
         <p class="shop_detail_tag">#{{$detail->area->area}}#{{$detail->genre->genre}}</p>
         <p class="shop_detail_summary">{{$detail->summary}}</p>
-      <!-- 評価ページ移動ボタン追加 -->
         <form action="/evaluate/?shop_id={{$detail->id}}" method="post">
           @csrf
           <input class="move_evaluate_botton" type="submit" value="この店舗の評価を見る">
@@ -62,14 +61,23 @@
           <div>
             <input type="date" name="reserve_date" class="shop_reservation_date" id="reserveDate">
           </div>
+          @if ($errors->has('reserve_date'))
+          <p class="reserve_error_comment">{{$errors->first('reserve_date')}}</p>
+          @endif
           <div>
             @component('components.reserve_time')
             @endcomponent
           </div>
+          @if ($errors->has('reserve_time'))
+          <p class="reserve_error_comment">{{$errors->first('reserve_date')}}</p>
+          @endif
           <div>
             @component('components.reserve_number')
             @endcomponent
           </div>
+          @if ($errors->has('number'))
+          <p class="reserve_error_comment">{{$errors->first('number')}}</p>
+          @endif
           <table class="shop_reservation_table">
             <tr class="shop_detail_table_row">
               <th class="shop_reservation_table_title">Shop</th>
@@ -100,14 +108,23 @@
           <div>
             <input type="date" name="reserve_date" class="shop_reservation_date" id="reserveDate">
           </div>
+          @if ($errors->has('reserve_date'))
+          <p class="reserve_error_comment">{{$errors->first('reserve_date')}}</p>
+          @endif
           <div>
             @component('components.reserve_time')
             @endcomponent
           </div>
+          @if ($errors->has('reserve_time'))
+          <p class="reserve_error_comment">{{$errors->first('reserve_date')}}</p>
+          @endif
           <div>
             @component('components.reserve_number')
             @endcomponent
           </div>
+          @if ($errors->has('number'))
+          <p class="reserve_error_comment">{{$errors->first('number')}}</p>
+          @endif
           <table class="shop_reservation_table">
             <tr class="shop_detail_table_row">
               <th class="shop_reservation_table_title">Shop</th>

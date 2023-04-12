@@ -78,7 +78,6 @@ body {
   border: solid 1px gray;
   border-radius: 3px;
 }
-
 .shop_reservation_number {
   margin: 10px 20px;
   padding: 3px;
@@ -86,7 +85,6 @@ body {
   border: solid 1px gray;
   border-radius: 3px;
 }
-
 .shop_reservation_table {
   background-color: #a3a3ff;
   color: white;
@@ -94,7 +92,6 @@ body {
   padding: 10px 0px;
   width: 90%;
 }
-
 .shop_reservation_botton {
   background-color: #0000ff;
   color: white;
@@ -103,4 +100,11 @@ body {
   padding: 10px 0px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
+}
+
+.reserve_error_comment {
+  margin: 10px 0px;
+  padding: 0px 20px;
+  color: red;
+  text-align: center;
 }

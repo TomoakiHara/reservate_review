@@ -39,11 +39,15 @@
   <main class="mypage_contents">
     <div class="reservation_statues">
       <h1 class="reservation_statues_title">予約状況</h3>
+      <p class="evaluate_comment">{{$text_evaluate}}</p>
+      @foreach ($errors->all() as $error)
+      <p class="reserve_edit_error_comment">{{$error}}</p>
+      @endforeach
       @foreach($reserves as $key=>$reserve)
         <div class="reservation_statues_block">
           <div class="mypage_reservation_icon_block">
             <div class="mypage_reservation_icon_block_left">
-              <img src="/images/timer_icon.jpg" class="mypage_resercation_icon">
+              <img src="/images/timer_icon.jpg" class="mypage_reservation_icon">
               <p class="mypage_reservation_title">予約{{$key+1}}</p>
             </div>
             <form action="cancel//?id={{$reserve->id}}" method="post">
@@ -51,24 +55,44 @@
               <input class="shop_detail_return_botton" type="submit" value="✕">
             </form>
           </div>
-          <table class="shop_reservation_table">
+          <form action="/edit/?id={{$reserve->id}}" method="post" class="shop_reservation_info_block">
+          @csrf
+            <table class="shop_reservation_table">
               <tr class="shop_detail_table_row">
                 <th class="shop_reservation_table_title">Shop</th>
-                <td class="shop_reservation_tabel_item">{{$reserve->shop->shop}}</td>
+                <td class="shop_reservation_table_item">{{$reserve->shop->shop}}</td>
+                <td class="shop_reservation_table_item">予約変更はこちら</td>
               </tr>
               <tr class="shop_detail_table_row">
                 <th class="shop_reservation_table_title">Date</th>
-                <td class="shop_reservation_tabel_item">{{$reserve->reserve_date}}</td>
+                <td class="shop_reservation_table_item">{{$reserve->reserve_date}}</td>
+                <td class="shop_reservation_table_item">
+                  <input type="date" name="reserve_date" class="shop_reservation_date" id="reserveDate">
+                </td>
               </tr>
               <tr class="shop_detail_table_row">
                 <th class="shop_reservation_table_title">Time</th>
-                <td class="shop_reservation_tabel_item">{{$reserve->reserve_time}}</td>
+                <td class="shop_reservation_table_item">{{$reserve->reserve_time}}</td>
+                <td class="shop_reservation_table_item">
+                  <div>
+                    @component('components.reserve_time')
+                    @endcomponent
+                  </div>
+                </td>
               </tr>
               <tr class="shop_detail_table_row">
                 <th class="shop_reservation_table_title">Number</th>
-                <td class="shop_reservation_tabel_item">{{$reserve->number}}人</td>
+                <td class="shop_reservation_table_item">{{$reserve->number}}人</td>
+                <td class="shop_reservation_table_item">
+                  <div>
+                    @component('components.reserve_number')
+                    @endcomponent
+                  </div>
+                </td>
               </tr>
-          </table>  
+            </table>
+            <input class="mypage_reserve_change_botton" type="submit" value="予約変更">
+          </form>
           <!-- evaluation_block -->
           <div class="mypage_evaluate_block">
             <form action="/post_evaluate/?shop_id={{$reserve->shop->id}}&user_id={{$user->id}}" method="post">
@@ -78,7 +102,6 @@
               <input class="mypage_evaluate_send_botton" type="submit" value="評価送信">
             </form>
           </div>
-          <p class="evaluate_comment">{{$text_evaluate}}</p>
         </div> 
       @endforeach
     </div>  
@@ -97,17 +120,17 @@
                 @csrf
                 <input class="shop_detail_botton" type="submit" value="詳しくみる">
               </form>
-                  @if ($user->id == $favorite->user_id && $favorite->shop->id == $favorite->shop_id)
-                    <form action="/delete/?shop_id={{$favorite->shop->id}}&user_id={{$user->id}}" method="post">
-                      @csrf
-                      <input class="favorite_icon" type="submit" value="❤">            
-                    </form>
-                  @else
-                    <form action="/favorite/?shop_id={{$favorite->shop->id}}&user_id={{$user->id}}" method="post">
-                      @csrf
-                      <input class="favorite_icon" type="submit" value="♡">
-                    </form>
-                  @endif
+              @if ($user->id == $favorite->user_id && $favorite->shop->id == $favorite->shop_id)
+                <form action="/delete/?shop_id={{$favorite->shop->id}}&user_id={{$user->id}}" method="post">
+                  @csrf
+                  <input class="favorite_icon" type="submit" value="❤">            
+                </form>
+              @else
+                <form action="/favorite/?shop_id={{$favorite->shop->id}}&user_id={{$user->id}}" method="post">
+                  @csrf
+                  <input class="favorite_icon" type="submit" value="♡">
+                </form>
+              @endif
             </div>
           </div>
         </div>

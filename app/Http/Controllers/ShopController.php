@@ -100,23 +100,4 @@ class ShopController extends Controller
         // dd($param);
         return view('shop_detail', $param);
     }
-
-    public function evaluate(Request $request)
-    {
-        $form = $request->all();
-        // dd($form);
-        $evaluates = Evaluate::where('shop_id', $request->shop_id)->get();
-        $shops = Shop::where('id', $request->shop_id)->get();
-        $param = [
-        'evaluates' => $evaluates,
-        'shops' => $shops,
-        ];
-        // dd($param);
-        return view('evaluate', $param);
-    }
-
-    public function return(Request $request)
-    {
-        return back();
-    }
 }
